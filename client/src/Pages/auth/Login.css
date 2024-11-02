@@ -1,0 +1,63 @@
+.login-container {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../../Assets/banner2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-left: 10%;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-form:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-control {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+  border-color: #00aaff;
+  box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00aaff, #005f99);
+  border: none;
+  padding: 0.75rem 3rem;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #fff;
+  transition: background 0.4s, transform 0.2s;
+  margin-top: 2%;
+  margin-left: 35%;
+}
+
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
