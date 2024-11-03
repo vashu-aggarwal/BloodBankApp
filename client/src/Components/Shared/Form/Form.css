@@ -1,0 +1,98 @@
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 1rem; /* Adjust the margin as needed */
+  }
+  
+  .form-check-input {
+    appearance: none; /* Hide default radio button */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff; /* Border color */
+    border-radius: 50%;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .form-check-input:checked::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+  }
+  
+  .form-check-label {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .form-check-input:hover {
+    border-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .form-check-input:checked:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Form.css */
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-center {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .d-flex.mb-3 {
+    justify-content: space-around;
+    margin-bottom: 24px;
+  }
+  
+  /* Simplified Link Styles */
+.link-text {
+    color: #021e3b;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+
+
+/* Adjusting layout for links and button */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.d-flex.flex-row.justify-content-between p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.d-flex.flex-row.justify-content-between a {
+    font-size: 0.9rem;
+    margin-left: 4px;
+}

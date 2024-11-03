@@ -1,29 +1,29 @@
 .register-container {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../../Assets/banner3.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .register-form {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 2.5rem;
-    width: 100%;
-    max-width: 400px;
-    margin-left: 10%;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .register-form h2 {
-    margin-bottom: 1.5rem;
-    color: #333;
-    font-weight: 600;
-  }
-  .register-form:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  }  
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.register-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 65%; /* 50% width for the image on the left */
+  background-image: url('../../Assets/banner5.jpg');
+  background-size: cover;
+  background-position: cover;
+}
+
+.register-form-container {
+  margin-left: 65%; /* Offset the form section to start after the image */
+  width: 50%; /* 50% width for the form on the right */
+  overflow-y: auto; /* Enable vertical scrolling within the form section */
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Optional background overlay */
+}
+
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+}

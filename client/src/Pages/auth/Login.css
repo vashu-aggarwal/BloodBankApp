@@ -1,5 +1,5 @@
 .login-container {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../../Assets/banner2.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../../Assets/banner3.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -11,9 +11,10 @@
 
 .login-form {
   background-color: rgba(255, 255, 255, 0.85);
+  /* background-color: red; */
   padding: 2.5rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 480px;
   margin-left: 10%;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
