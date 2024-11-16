@@ -21,17 +21,16 @@ const Form = ({ formType, submitBtn, formTitle }) => {
           if (formType === "login") {
             return handleLogin(e, email, password, role);
           } else if (formType === "register") {
-            return handleRegister(
-              e,
+            return handleRegister(e,
+              name,
+              role,
               email,
               password,
-              role,
-              name,
-              organisationName,
-              hospitalName,
-              website,
               phone,
-              address
+              organisationName,
+              address,
+              hospitalName,
+              website
             );
           }
         }}
