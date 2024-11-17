@@ -1,0 +1,62 @@
+/* Apply styles for the navbar */
+.navbar {
+    background-color: #ff4d4d; /* Light blood red */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Space between brand and nav items */
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style for the brand name on the left */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Style for the navigation list */
+  .navbar-nav {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: row;
+    align-items: center; /* Align items vertically */
+    /* justify-content: center; */
+    /* width: 500px; */
+    gap: 40px; /* Add space between items */
+    list-style: none; /* Remove default list styling */
+    margin: 10;
+    padding: 0;
+    
+  }
+  
+  Style for each navigation item
+  .nav-item {
+    display: inline-block;
+    align-items: center;
+  }
+  
+  /* Style for the "Welcome" text */
+  .nav-link {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Style for the Logout button */
+  .btn-danger {
+    background-color: white;
+    color: #ff4d4d;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #1e1414;
+    color: white;
+  }
+  
