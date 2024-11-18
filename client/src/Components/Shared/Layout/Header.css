@@ -1,19 +1,38 @@
 /* Apply styles for the navbar */
 .navbar {
-    background-color: #ff4d4d; /* Light blood red */
+    background-color: #f2ecec; /* Light blood red */
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between; /* Space between brand and nav items */
     align-items: center;
     font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed; /* Keep navbar fixed at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align at the very top */
+    z-index: 999; /* Lower than sidebar */
+  }
+
+  .navbar-brand {
+    display: flex; /* Arrange items in a row */
+    align-items: center; /* Vertically align logo and text */
+    gap: 10px; /* Space between the logo and text */
   }
   
-  /* Style for the brand name on the left */
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+  .navbar-brand img {
+    height: 50px; /* Adjust the height of the logo */
+    width: auto; /* Maintain aspect ratio */
   }
+  
+  .navbar-brand p {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2rem; /* Adjust text size */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Text color */
+    
+  }
+  
   
   /* Style for the navigation list */
   .navbar-nav {
@@ -37,15 +56,17 @@
   
   /* Style for the "Welcome" text */
   .nav-link {
-    font-size: 1rem;
-    color: white;
+    font-size: 1.1rem;
+    color: rgb(16, 15, 15);
     margin: 0;
+    font: 600;
+    cursor: pointer;
   }
   
   /* Style for the Logout button */
   .btn-danger {
-    background-color: white;
-    color: #ff4d4d;
+    background-color: rgb(222, 25, 25);
+    color: #e7dfdf;
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
@@ -56,7 +77,8 @@
   }
   
   .btn-danger:hover {
-    background-color: #1e1414;
+    background-color: #f00e0e;
     color: white;
+    cursor: pointer;
   }
   

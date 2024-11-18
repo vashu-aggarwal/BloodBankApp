@@ -1,0 +1,60 @@
+/* Sidebar container styles */
+.sidebar {
+    width: 300px; /* Set the width of the sidebar */
+    height: calc(100vh - 60px); /* Adjust height to exclude the navbar */
+    background-color: #979696; /* Dark navy blue background */
+    color: rgb(3, 3, 3); /* Text color */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    padding: 20px;
+    position: fixed; /* Keep the sidebar fixed */
+    top: 75px; /* Offset below the navbar */
+    left: 0;
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    font-family: 'Arial', sans-serif;
+    z-index: 1000; /* Ensure sidebar appears above other elements */
+}
+  
+  /* Menu container styles */
+  .menu {
+    display: flex;
+    flex-direction: column; /* Align menu items vertically */
+    gap: 20px; /* Add space between menu items */
+  }
+  
+  /* Menu item styles */
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between icon and text */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effect */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for links */
+  }
+  
+  /* Active menu item */
+  .menu-item.active {
+    background-color: #ee3333; /* Highlight active menu item with a teal color */
+    font-weight: bold; /* Make active item bold */
+  }
+  
+  /* Hover effect */
+  .menu-item:hover {
+    background-color: #c4817e; /* Slightly lighter background on hover */
+    transform: translateX(5px); /* Slide a little to the right on hover */
+  }
+  
+  /* Icon styles */
+  .menu-item i {
+    font-size: 1.2rem; /* Slightly larger icons */
+  }
+  
+  /* Link styles */
+  .menu-item a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the sidebar's text color */
+    font-size: 1rem; /* Adjust text size */
+  }
+  
