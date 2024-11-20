@@ -1,0 +1,10 @@
+.Home {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Use auto to adjust height based on content */
+    background-color: red; /* Background color */
+    border: 2px solid black; /* Add a border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    
+    
+}

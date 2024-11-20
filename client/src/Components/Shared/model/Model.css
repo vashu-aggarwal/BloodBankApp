@@ -1,0 +1,55 @@
+/* Style for the custom select dropdown */
+.CustomSelect {
+    width: 100%; /* Set the width of the dropdown */
+    height: 40px; /* Height of the select box */
+    background-color: #f2f2f2; /* Light grey background */
+    color: #333; /* Darker text */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding inside the box */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition effects */
+  }
+  
+  /* Hover and focus effect on the select */
+  .CustomSelect:hover, 
+  .CustomSelect:focus {
+    background-color: #e6e6e6; /* Slightly darker grey */
+    border-color: #8b0000; /* Blood red border */
+    outline: none; /* Remove focus outline */
+  }
+  
+ 
+
+  /* Button base styles */
+.SubmitButton {
+    background-color: #8b0000; /* Blood red */
+    color: #ffffff; /* White text */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px; /* Add some margin */
+    width: 150px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor */
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    
+  }
+  
+  /* Hover effect */
+  .SubmitButton:hover {
+    background-color: #a00000; /* Slightly lighter blood red */
+    transform: scale(1.05); /* Slight scaling on hover */
+    color: #ffffff;
+  }
+  
+  /* Focus effect */
+  .SubmitButton:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0px 0px 8px #a00000; /* Glow effect */
+  }
+  

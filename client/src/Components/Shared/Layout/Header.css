@@ -8,9 +8,9 @@
     align-items: center;
     font-family: Arial, sans-serif;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    position: fixed; /* Keep navbar fixed at the top */
+    /* position: fixed;  */
     width: 100%; /* Full width */
-    top: 0; /* Align at the very top */
+    top: 0; 
     z-index: 999; /* Lower than sidebar */
   }
 

@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Spinners from "../Components/Shared/Spinners";
 import Layout from "../Components/Shared/Layout/Layout";
+import "./Home.css";
+import Model from "../Components/Shared/model/Model";
 const Home = () => {
   const { loading, error } = useSelector((state) => state.auth);
   return (
@@ -10,9 +12,18 @@ const Home = () => {
       {loading ? (
         <Spinners />
       ) : (
-        <div>
-          <h1>Home page</h1>
-        </div>
+        <>
+          <h4
+            className="ms-4"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            style={{cursor: "pointer"}}
+          >
+            <i className="fa-solid fa-plus text-success py-4"></i>
+            Add Inventory
+          </h4>
+          <Model/>
+        </>
       )}
     </Layout>
   );
