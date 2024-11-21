@@ -1,15 +1,40 @@
 import { React, useState } from "react";
-import "./Model.css";
+import { useSelector } from "react-redux";
 import InputType from "../Form/InputType";
+import API from "../../../services/API";
+import "./Model.css";
+
 const Model = () => {
   const [inventoryType, setInventoryType] = useState("in");
   const [bloodGroup, setBloodGroup] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const [donarEmail,setDonarEmail]= useState("");
+  const [donarEmail, setDonarEmail] = useState("");
+  const { user } = useSelector((state) => state.auth);
 
-  const handleModelSubmit=()=>{
-    
-  }
+
+  const handleModelSubmit = async () => {
+    try {
+      if (!bloodGroup || !quantity) {
+        return alert("Please select all fields");
+      }
+      const { data } = await API.post("/inventory/create-inventory", {
+        donarEmail,
+        email: user?.email,
+        organisation: user?._id,
+        inventoryType,
+        bloodGroup,
+        quantity
+      });
+
+      if (data?.success) {
+        alert("New Record created");
+        window.location.reload();
+      }
+    } catch (error) {
+      window.location.reload();
+      console.log(error);
+    }
+  };
   return (
     <div
       className="modal fade"
@@ -86,7 +111,7 @@ const Model = () => {
               onChange={(e) => setDonarEmail(e.target.value)}
             />
             <InputType
-              labelText={"Quantity"}
+              labelText={"Quantity(ml)"}
               labelFor={"quantity"}
               inputType={"Number"}
               value={quantity}
@@ -94,7 +119,11 @@ const Model = () => {
             />
           </div>
           <div className="modal-footer">
-            <button type="button" className="SubmitButton btn btn-custom" onClick={handleModelSubmit}>
+            <button
+              type="button"
+              className="SubmitButton btn btn-custom"
+              onClick={handleModelSubmit}
+            >
               Submit
             </button>
           </div>
