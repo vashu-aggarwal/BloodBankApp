@@ -8,7 +8,7 @@ const Model = () => {
   const [inventoryType, setInventoryType] = useState("in");
   const [bloodGroup, setBloodGroup] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const [donarEmail, setDonarEmail] = useState("");
+  const [email, setEmail] = useState("");
   const { user } = useSelector((state) => state.auth);
 
 
@@ -18,8 +18,8 @@ const Model = () => {
         return alert("Please select all fields");
       }
       const { data } = await API.post("/inventory/create-inventory", {
-        donarEmail,
-        email: user?.email,
+        
+        email,
         organisation: user?._id,
         inventoryType,
         bloodGroup,
@@ -31,8 +31,9 @@ const Model = () => {
         window.location.reload();
       }
     } catch (error) {
-      window.location.reload();
+      alert(error.response.data.message);
       console.log(error);
+      window.location.reload();
     }
   };
   return (
@@ -93,7 +94,7 @@ const Model = () => {
               aria-label="Floating label select example"
               onChange={(e) => setBloodGroup(e.target.value)}
             >
-              <option selected>Open this select menu</option>
+              <option defaultValue='Open this select menu'>Open this select menu</option>
               <option value={"O+"}>O+</option>
               <option value={"O-"}>O-</option>
               <option value={"A+"}>A+</option>
@@ -103,13 +104,24 @@ const Model = () => {
               <option value={"AB+"}>AB+</option>
               <option value={"AB-"}>AB-</option>
             </select>
+            {inventoryType==="in"?(
             <InputType
-              labelText={"Donar Email"}
-              labelFor={"donarEmail"}
+            labelText={"Donar Email"}
+            labelFor={"donarEmail"}
+            inputType={"email"}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+            ):(
+              <InputType
+              labelText={"Hospital Email"}
+              labelFor={"hospitalEmail"}
               inputType={"email"}
-              value={donarEmail}
-              onChange={(e) => setDonarEmail(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
+            )}
+
             <InputType
               labelText={"Quantity(ml)"}
               labelFor={"quantity"}

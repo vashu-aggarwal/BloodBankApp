@@ -25,7 +25,7 @@ const Header = () => {
             <li className="nav-item">
               <p className="nav-link">
                 <BiSolidUserCircle size={26} /> Welcome{" "}
-                {user?.name.split(" ")[0] || user?.hospitalName || user?.organizationName}! &nbsp;
+                {user?.name.split(" ")[0] || user?.hospitalName || user?.organisationName}! &nbsp;
                 <span className="badge text-bg-secondary">{user?.role}</span>
               </p>
             </li>

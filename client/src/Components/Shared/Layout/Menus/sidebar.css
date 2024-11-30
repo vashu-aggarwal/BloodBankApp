@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column; /* Align menu items vertically */
     gap: 20px; /* Add space between menu items */
+    margin-top: 20px;
   }
   
   /* Menu item styles */
@@ -30,6 +31,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effect */
     cursor: pointer;
     text-decoration: none; /* Remove underline for links */
+    
   }
   
   /* Active menu item */
