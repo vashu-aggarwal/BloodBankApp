@@ -1,0 +1,31 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .header {
+    flex: 0 0 auto; /* Header should not grow or shrink */
+    width: 100%;
+    background-color: #f8f9fa; /* Example background */
+  }
+  
+  .content {
+    display: flex;
+    flex: 1; /* Occupy remaining height */
+    overflow: hidden; /* Prevent the whole content from scrolling */
+  }
+  
+  .sidebar {
+    flex: 0 0 21%; /* Sidebar with a fixed width */
+    background-color: #f1f1f1; /* Example background */
+    overflow-y: auto; /* Optional: scroll if sidebar content exceeds height */
+  }
+  
+  .main-content {
+    flex: 1; /* Remaining width for the main content */
+    overflow-y: auto; /* Make this area scrollable */
+    padding: 16px; /* Optional padding */
+    background-color: #fff; /* Example background */
+  }
+  

@@ -22,6 +22,7 @@ const Hospitals = () => {
   }, []);
   return (
     <Layout>
+      <div className="container">
       <div className="table-container">
         <table className="custom-table">
           <thead>
@@ -46,6 +47,7 @@ const Hospitals = () => {
           </tbody>
         </table>
       </div>
+    </div>
     </Layout>
   );
 };

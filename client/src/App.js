@@ -9,6 +9,9 @@ import PublicRoute from "./Components/Routes/PublicRoute";
 import Donar from "./Pages/Dashboard/Donar"
 import Hospitals from "./Pages/Dashboard/Hospitals";
 import Organistion from "./Pages/Dashboard/Organistion";
+import Consumer from "./Pages/Dashboard/Consumer";
+import Donation from "./Pages/Dashboard/Donation";
+import Analytics from "./Pages/Dashboard/Analytics";
 function App() {
   return (
     <div>
@@ -19,6 +22,30 @@ function App() {
           element={
             <ProtectedRoute>
               <Donar/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/analytics"
+          element={
+            <ProtectedRoute>
+              <Analytics/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/donation"
+          element={
+            <ProtectedRoute>
+              <Donation/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/consumer"
+          element={
+            <ProtectedRoute>
+              <Consumer/>
             </ProtectedRoute>
           }
         />

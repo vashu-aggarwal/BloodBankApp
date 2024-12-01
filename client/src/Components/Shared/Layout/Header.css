@@ -7,11 +7,12 @@
     justify-content: space-between; /* Space between brand and nav items */
     align-items: center;
     font-family: Arial, sans-serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(108, 104, 104, 0.954); /* Subtle shadow */
     /* position: fixed;  */
     width: 100%; /* Full width */
     top: 0; 
     z-index: 999; /* Lower than sidebar */
+    
   }
 
   .navbar-brand {

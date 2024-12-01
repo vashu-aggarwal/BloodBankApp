@@ -114,6 +114,30 @@ const getInventoryController = async (req, res) => {
   }
 };
 
+// GET HOSPITAL BLOOD RECORD 
+const getInventoryHospitalController = async (req, res) => {
+  try {
+    const inventory = await inventoryModel
+      .find(req.body.filters)
+      .populate("donar")
+      .populate("hospital")
+      .populate("organisation")
+      .sort({ createdAt: -1 });
+    return res.status(200).send({
+      success: true,
+      message: " Get Hospital Consumer Record successfully ",
+      inventory,
+    });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send({
+      success: false,
+      message: "Error in Get Hospital Consumer API",
+      error,
+    });
+  }
+};
+
 //GET DONAR RECORDS
 
 const getDonarController = async (req, res) => {
@@ -186,11 +210,35 @@ const getOrganisationController =async (req,res)=>{
       })
     }
 }
+const getOrganisationForHospitalController =async (req,res)=>{
+    try {
+        const hospital =req.body.userId;
+        const ordId= await inventoryModel.distinct("organisation",{hospital});
+        // find org
+        const organisations= await userModel.find({
+          _id:{$in:ordId},
+        });
+        return res.status(200).send({
+          success: true,
+          message:"Hospital Org Data Fetched Successfully",
+          organisations,
+        });
+    } catch (error) {
+      console.log(error);
+      return res.status(500).send({
+        success: false,
+        message: "Error in Get Hospital Organisation API",
+        error,
+      })
+    }
+}
 
 module.exports = {
   createInventoryController,
   getInventoryController,
+  getInventoryHospitalController,
   getDonarController,
   getHospitalController,
-  getOrganisationController
+  getOrganisationController,
+  getOrganisationForHospitalController
 };
