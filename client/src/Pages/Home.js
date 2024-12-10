@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Spinners from "../Components/Shared/Spinners";
 import Layout from "../Components/Shared/Layout/Layout";
 import "./Home.css";
@@ -7,9 +8,10 @@ import Model from "../Components/Shared/model/Model";
 import API from "../services/API";
 import moment from "moment";
 const Home = () => {
-  const { loading, error } = useSelector((state) => state.auth);
+  const { loading, error,user } = useSelector((state) => state.auth);
   const [data, setData] = useState([]);
 
+  const navigate = useNavigate();
   const getBloodRecord = async () => {
     try {
       const { data } = await API.get("/inventory/get-inventory");
@@ -27,6 +29,7 @@ const Home = () => {
   }, []);
   return (
     <Layout>
+      {user?.role==='admin' && navigate('/admin')}
       {error && <span>alert(error)</span>}
       {loading ? (
         <Spinners />

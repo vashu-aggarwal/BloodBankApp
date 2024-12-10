@@ -33,7 +33,9 @@ const Header = () => {
                 <span className="badge text-bg-secondary">{user?.role}</span>
               </p>
             </li>
-            {location.pathname === "/" ? (
+            {location.pathname === "/" ||
+            location.pathname === "/donar" ||
+            location.pathname === "/hospital" ? (
               <li className="nav-item">
                 <Link to="/analytics" className="nav-link">
                   Analytics

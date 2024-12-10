@@ -1,19 +1,13 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 // import { UserMenu } from "./Menus/UserMenu";
-import { useLocation, Link, useNavigate } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./Menus/sidebar.css";
 const Sidebar = () => {
   //GET USER STATE
   const { user } = useSelector((state) => state.auth);
   const location = useLocation();
-  // const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (user?.role === "donar") {
-  //     navigate("/organisation");
-  //   }
-  // }, [user?.role, navigate]);
   return (
     <div>
       <div className="sidebar">
@@ -43,6 +37,37 @@ const Sidebar = () => {
               >
                 <i className="fa-solid fa-hospital"></i>
                 <Link to="/hospital">Hospital</Link>
+              </div>
+            </>
+          )} 
+          {user?.role === "admin" && (
+            <>
+              <div
+                className={`menu-item ${location.pathname === "/donar-list" && "active"}`}
+              >
+                <i className="fa-duotone fa-solid fa-hand-holding-medical"></i>
+                
+                <Link to="/donar-list">Donar List</Link>
+              </div>
+
+              <div
+                className={`menu-item ${
+                  location.pathname === "/hospital-list" && "active"
+                }`}
+              >
+                <i className="fa-solid fa-hospital"></i>
+                
+                <Link to="/hospital-list">Hospital List</Link>
+              </div>
+
+              <div
+                className={`menu-item ${
+                  location.pathname === "/org-list" && "active"
+                }`}
+              >
+                <i className="fa-solid fa-building-ngo"></i>
+                
+                <Link to="/org-list">Organisation List</Link>
               </div>
             </>
           )}
