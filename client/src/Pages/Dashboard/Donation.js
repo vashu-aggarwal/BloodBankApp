@@ -15,10 +15,10 @@ const Donation = () => {
             donar: user?._id,
           },
         });
-        //   console.log(data);
+        
         if (data?.success) {
           setData(data?.inventory);
-          console.log(data);
+          
         }
       } catch (error) {
         console.log(error);

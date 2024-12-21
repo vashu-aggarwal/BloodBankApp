@@ -38,7 +38,7 @@ const createInventoryController = async (req, res) => {
           },
         },
       ]);
-      // console.log("Total In", totalInOfRequestedBlood);
+      
       const totalIn = totalInOfRequestedBlood[0]?.total || 0;
       //calculate OUT Blood Quanitity
 

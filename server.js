@@ -27,6 +27,9 @@ app.use('/api/v1/inventory',require('./routes/inventoryRoutes'));
 
 app.use('/api/v1/analytics',require('./routes/analyticsRoutes'));
 
+
+app.use('/api/v1/admin',require('./routes/adminRoutes'));
+
 //PORT
 
 const PORT=process.env.PORT || 8080;

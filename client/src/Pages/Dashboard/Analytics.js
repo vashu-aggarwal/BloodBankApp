@@ -21,7 +21,7 @@ const Analytics = () => {
       const { data } = await API.get("/analytics/bloodGroups-data");
       if (data?.success) {
         setData(data?.bloodGroupData);
-        // console.log(data?.bloodGroupData);
+        
       }
     } catch (error) {
       console.error(error);
@@ -36,7 +36,7 @@ const Analytics = () => {
       const { data } = await API.get("/inventory/get-recent-inventory");
       if (data?.success) {
         setInventoryData(data?.inventory);
-        console.log(data);
+        
       }
     } catch (error) {
       console.log(error);

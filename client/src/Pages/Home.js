@@ -17,7 +17,6 @@ const Home = () => {
       const { data } = await API.get("/inventory/get-inventory");
       if (data?.success) {
         setData(data?.inventory);
-        // console.log(data);
       }
     } catch (error) {
       console.error(error);
@@ -30,6 +29,8 @@ const Home = () => {
   return (
     <Layout>
       {user?.role==='admin' && navigate('/admin')}
+      {user?.role==='donar' && navigate('/organisation')}
+      {user?.role==='hospital' && navigate('/organisation')}
       {error && <span>alert(error)</span>}
       {loading ? (
         <Spinners />
