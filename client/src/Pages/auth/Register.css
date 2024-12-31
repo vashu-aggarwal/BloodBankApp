@@ -27,3 +27,42 @@
   max-width: 400px;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column; /* Stack the image and form vertically */
+    height: auto;
+  }
+
+  .register-image {
+    display: none; /* Hide the image on smaller screens */
+  }
+
+  .register-form-container {
+    margin-left: 0; /* Remove left margin for mobile */
+    width: 100%; /* Make the form take full width */
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .register-form {
+    width: 90%; /* Limit form width to 90% of the container */
+    margin: 0 auto;
+  }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+  .register-image {
+    display: none; /* Hide the image on mobile screens */
+  }
+
+  .register-form-container {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .register-form {
+    width: 95%; /* Form takes almost full width */
+    margin: 0 auto;
+  }
+}

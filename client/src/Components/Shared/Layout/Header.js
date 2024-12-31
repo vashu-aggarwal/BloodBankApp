@@ -19,7 +19,17 @@ const Header = () => {
       <nav className="navbar">
         <div className="container-fluid">
           <div className="navbar-brand">
-            <BiSolidDonateBlood size={32} color="#8B0000" />
+            {/* <BiSolidDonateBlood size={32} color="#8B0000" /> */}
+            <img
+              src="https://150132389.v2.pressablecdn.com/wp-content/uploads/2014/03/Screen-shot-2013-11-04-at-11.38.20-AM.png"
+              alt="Blood Bank"
+              style={{
+                width: "30px",
+                height: "30px",
+                marginRight: "10px",
+                borderRadius: "50%",
+              }}
+            />
             <p>Blood Bank</p>
           </div>
           <ul className="navbar-nav">

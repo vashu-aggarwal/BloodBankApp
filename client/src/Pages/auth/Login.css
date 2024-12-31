@@ -62,3 +62,55 @@
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .login-form {
+    margin-left: 5%;
+    padding: 2rem;
+  }
+
+  .btn-primary {
+    margin-left: 25%;
+    padding: 0.75rem 2.5rem;
+  }
+
+  /* Adjusting the width for smaller screens */
+  .login-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .login-form {
+    max-width: 90%;
+    margin-left: 0;
+  }
+
+  /* Heading adjustments */
+  .login-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Media query for very small screens (mobile devices) */
+@media (max-width: 480px) {
+  .login-form {
+    padding: 1.5rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin-left: 0;
+    padding: 0.75rem 2rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 0.5rem;
+  }
+}
