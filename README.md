@@ -4,7 +4,7 @@ A Blood Bank Management System designed to simplify and automate the process of 
 
 ### Live Demo
 
-You can access the live version of the project at the following link:  
+You can access the live version of the project at the following link wait for atleast 10 sec :  
 [Blood Bank Management System](https://lifesaver-n0jt.onrender.com/login)
 
 ---
@@ -39,6 +39,19 @@ Make sure you have the following installed:
 - [Node.js](https://nodejs.org/)
 - [MongoDB](https://www.mongodb.com/)
 - [Git](https://git-scm.com/)
+
+
+![image](https://github.com/user-attachments/assets/3f58bf82-1492-41ca-81bf-cba61fc4e0e3)
+
+![image](https://github.com/user-attachments/assets/cf1306e9-6714-4dd4-87e6-aaec1228f6dc)
+
+![image](https://github.com/user-attachments/assets/bf5a182b-8920-4fd9-aeb3-562a16f11ba4)
+
+![image](https://github.com/user-attachments/assets/75da8d71-08a1-461b-87e8-4dff06546a95)
+
+
+
+
 
   
   
