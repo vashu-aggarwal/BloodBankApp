@@ -9,6 +9,27 @@ You can access the live version of the project at the following link wait for at
 
 ---
 
+## Demo Login Credentials  
+Use the following credentials to explore the application:  
+
+### Organisation  
+- **Email:** organisation1@gmail.com  
+- **Password:** 12345  
+
+### Admin  
+- **Email:** admin@gmail.com  
+- **Password:** 12345  
+
+### Hospital  
+- **Email:** hospital1@gmail.com  
+- **Password:** 12345  
+
+### Donor  
+- **Email:** donar1@gmail.com  
+- **Password:** 12345
+
+- 
+
 ## Features
 
 - **User Authentication**: Allows users (donors and admin) to register, log in, and manage their accounts.
